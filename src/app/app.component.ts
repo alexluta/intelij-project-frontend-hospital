@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router'; // importați RouterModule pentru rute
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,  // declară componenta ca fiind standalone
+  imports: [RouterModule], // adăugați aici modulele necesare, cum ar fi RouterModule
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'hospital';
