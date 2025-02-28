@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './asistenta.component.css'
 })
 export class AsistentaComponent {
-
+  onClickRaport() {
+    console.log('Buton apăsat!');
+    // Poți adăuga logica necesară pentru gestionarea raportului
+  }
 }
