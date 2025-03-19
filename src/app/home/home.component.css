@@ -1,0 +1,105 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #845ec2;
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.home-container {
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 10px 10px rgba(0.3, 0.3, 0.2, 0.3);
+    margin-top: 40px;
+}
+
+.home-container button {
+    background-color: #845ec2;
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Mai mic pentru echilibru */
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    display: flex; /* Folosește flexbox pentru a centra textul */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Efect la hover */
+.home-container button:hover {
+    background-color: #ff6f91;
+    transform: scale(1.2); /* Mărire la hover */
+}
+
+/* Efect la apăsare */
+.home-container button:active {
+    transform: scale(1.1); /* Mărire ușoară la apăsare */
+}
+
+
+.login-container button {
+    background-color: #db538c;
+    color: white;
+    border: none;
+    padding: 5px 15px; /* Poți ajusta dimensiunile pentru a fi consistente */
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Pentru a ajusta lățimea butonului */
+}
+
+/* Efect la hover pentru login button */
+.login-container button:hover {
+    background-color: #ff3b58;
+    transform: scale(1.2); /* Mărire la hover */
+}
+
+/* Efect la apăsare pentru login button */
+.login-container button:active {
+    transform: scale(2.1); /* Mărire ușoară la apăsare pentru login */
+}
+
+.login-container {
+    margin-top: 500px; /* Crește această valoare pentru a-l coborî mai jos */
+}
+.login-container a {
+    text-decoration: none; /* Elimină sublinierea */
+}
+
+
+/* Stilizarea link-ului <a> pentru a ocupa toată zona butonului */
+.home-container a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16%; /* Setează lățimea fiecărui link */
+}

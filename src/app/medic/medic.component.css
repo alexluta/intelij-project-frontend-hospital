@@ -2,10 +2,12 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start; /* Aliniază butonul sus pe axa verticală */
+    align-items: center; /* Centrează butonul pe axa orizontală */
     height: 100vh;
     margin: 0;
+    padding-top: 0px;
+    flex-direction: column; /* Organizează elementele într-o coloană */
 }
 
 .medic-container {
@@ -37,4 +39,24 @@ body {
 
 .medic-container button:hover {
     background-color: #ff6f91;
+}
+
+#mediciList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+#mediciList li {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0; /* Spațiu între elemente */
+}
+
+#mediciList li:nth-child(odd) {
+    background-color: #ffe0e0; /* Culoare mai deschisă pentru elementele impare */
+}
+
+#mediciList li:nth-child(even) {
+    background-color: #ffb3b3; /* Culoare mai închisă pentru elementele pare */
 }

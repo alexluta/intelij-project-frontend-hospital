@@ -1,1 +1,30 @@
-<p>login works!</p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+
+  <script>
+    function validateForm() {
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const loginButton = document.getElementById('loginButton');
+
+        loginButton.disabled = username === '' || password === '';
+    }
+  </script>
+</head>
+<body>
+<div class="login-container">
+  <h2>Login</h2>
+  <input type="text" id="username" placeholder="Username" onkeyup="validateForm()">
+  <input type="password" id="password" placeholder="Password" onkeyup="validateForm()">
+  <button id="loginButton" enable>Login</button>
+  <p>Nu ai cont? <a href="/register">Inregistreaza-te</a></p>
+</div>
+</body>
+</html>
+<p>Esti in interfata "LOGIN"!</p>
+

@@ -3,57 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asistenta</title>
-  <style>
-    body {
-        font-family: 'Comic Sans MS', cursive, sans-serif;
-        background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        height: 100vh;
-        margin: 0;
-    }
-
-    .asistenta-container {
-        background: #fff;
-        padding: 40px;
-        border-radius: 20px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        width: 300px;
-        border: 5px solid #845ec2;
-    }
-
-    .asistenta-container h2 {
-        margin-bottom: 20px;
-        color: #ff6f91;
-    }
-
-    .asistenta-container button {
-        background-color: #845ec2;
-        color: white;
-        border: none;
-        padding: 15px 20px;
-        border-radius: 10px;
-        cursor: pointer;
-        width: 100%;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-    }
-
-    .asistenta-container button:hover {
-        background-color: #ff6f91;
-    }
-  </style>
+  <title>Asistente</title>
 </head>
 <body>
-<div class="asistenta-container">
-  <button>Raport asistente</button>
-</div>
+  <div class="asistenta-container">
+    <!-- Butonul care va lansa cererea -->
+    <button id="raportAsistenteBtn" (click)="loadRaportAsistente()">Raport asistente</button>
+    
+    <!-- Adăugăm un newline -->
+    <br> <!-- Aceasta va adăuga un spațiu între buton și listă -->
+
+  </div>
+
+  <!-- Lista de asistente -->
+  <ul id="asistenteList"></ul>
 </body>
 </html>
-
-<p>Esti in interfata "ASISTENTA"</p>
-
-<p>asistenta works!</p>

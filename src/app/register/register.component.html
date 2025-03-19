@@ -1,1 +1,37 @@
-<p>register works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Page</title>
+
+  <script>
+    function validateForm() {
+        const username = document.getElementById('username').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const confirmPassword = document.getElementById('confirmPassword').value.trim();
+        const registerButton = document.getElementById('registerButton');
+
+        registerButton.disabled = !(username && email && password && confirmPassword && (password === confirmPassword));
+    }
+
+    function handleRegister() {
+        alert('Registration successful!');
+    }
+  </script>
+</head>
+<body>
+<div class="register-container">
+  <h2>Creeaza cont</h2>
+  <input type="text" id="username" placeholder="Username" onkeyup="validateForm()">
+  <input type="email" id="email" placeholder="Email" onkeyup="validateForm()">
+  <input type="password" id="password" placeholder="Password" onkeyup="validateForm()">
+  <input type="password" id="confirmPassword" placeholder="Confirm Password" onkeyup="validateForm()">
+  <button id="registerButton" enable onclick="handleRegister()">Register</button>
+  <p>Ai deja cont? <a href="/login">Login</a></p>
+</div>
+</body>
+</html>
+<p>Esti in interfata "REGISTER"!</p>
+

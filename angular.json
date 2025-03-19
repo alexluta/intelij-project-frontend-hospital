@@ -67,7 +67,8 @@
               "buildTarget": "hospital:build:production"
             },
             "development": {
-              "buildTarget": "hospital:build:development"
+              "buildTarget": "hospital:build:development",
+              "hmr": true   
             }
           },
           "defaultConfiguration": "development"

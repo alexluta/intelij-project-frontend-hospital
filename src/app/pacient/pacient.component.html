@@ -1,1 +1,21 @@
-<p>pacient works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacienti</title>
+</head>
+<body>
+  <div class="pacient-container">
+    <!-- Butonul care va lansa cererea -->
+    <button id="raportPacientiBtn" (click)="loadRaportPacienti()">Raport pacienti</button>
+    
+    <!-- Adăugăm un newline -->
+    <br> <!-- Aceasta va adăuga un spațiu între buton și listă -->
+
+  </div>
+
+  <!-- Lista de pacienti -->
+  <ul id="pacientiList"></ul>
+</body>
+</html>

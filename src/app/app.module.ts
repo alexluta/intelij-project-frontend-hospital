@@ -1,15 +1,8 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { routes } from './app.routes'; // importați rutele din `app.routes.ts`
-import { AppComponent } from './app.component'; // importați AppComponent
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+import { provideHttpClient } from '@angular/common/http';
 
-@NgModule({
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(routes), // înregistrează rutele
-    AppComponent, // adăugați componenta standalone aici
-  ],
+bootstrapApplication(AppComponent, {
+  providers: [provideHttpClient()]  
+});
 
-})
-export class AppModule {}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MedicService } from './medic.service';
 
 @Component({
   selector: 'app-medic',
@@ -6,28 +7,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./medic.component.css']
 })
 export class MedicComponent implements OnInit {
-  medici: any[] = [];
 
-  constructor() {}
+  medici: any[] = [];  // Lista de medici
 
-  ngOnInit(): void {}
+  constructor(private medicService: MedicService) { }
 
-  getRaportMedici(): void {
-    fetch('http://localhost:8080/raportMedici')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Eroare la încărcarea medicilor');
-        }
-        return response.json();
-      })
-      .then(medici => {
-        this.medici = medici;
-        alert(medici);
-      })
-      .catch(error => {
-        console.error('Eroare:', error);
-        alert('A apărut o problemă la încărcarea medicilor.');
+  ngOnInit(): void { }
+
+  // Metoda care se apelează când se apasă butonul
+  loadRaportMedici(): void {
+    this.medicService.getMedici().subscribe(data => {
+      this.medici = data;
+      this.displayMedici();
+    });
+  }
+
+  // Afișează medicii în lista
+  displayMedici(): void {
+    const mediciList = document.getElementById('mediciList');
+    if (mediciList) {
+      mediciList.innerHTML = '';  // Curăță lista existentă
+      this.medici.forEach(medic => {
+        const li = document.createElement('li');
+        li.textContent = `${medic.nume} ${medic.prenume} - Sectia: ${medic.specializare}`;
+        mediciList.appendChild(li);
       });
-
+    }
   }
 }

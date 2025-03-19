@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 
-.medic-container {
+.sectie-container {
     background: #fff;
     padding: 40px;
     border-radius: 20px;
@@ -18,12 +18,12 @@ body {
     border: 5px solid #845ec2;
 }
 
-.medic-container h2 {
+.sectie-container h2 {
     margin-bottom: 20px;
     color: #ff6f91;
 }
 
-.medic-container button {
+.sectie-container button {
     background-color: #845ec2;
     color: white;
     border: none;
@@ -35,6 +35,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.medic-container button:hover {
+.sectie-container button:hover {
     background-color: #ff6f91;
 }

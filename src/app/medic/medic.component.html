@@ -4,19 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Medici</title>
-
 </head>
 <body>
-<div class="medic-container">
-  <!-- Adaugă id la buton -->
-  <button id="raportMediciBtn">Raport medici</button>
-</div>
+  <div class="medic-container">
+    <!-- Butonul care va lansa cererea -->
+    <button id="raportMediciBtn" (click)="loadRaportMedici()">Raport medici</button>
+    
+    <!-- Adăugăm un newline -->
+    <br> <!-- Aceasta va adăuga un spațiu între buton și listă -->
 
+  </div>
 
-<!-- Adaugă un element pentru lista de medici -->
-<ul id="mediciList"></ul>
-
+  <!-- Lista de medici -->
+  <ul id="mediciList"></ul>
 </body>
 </html>
-
-<p>Esti in interfata MEDIC!</p>

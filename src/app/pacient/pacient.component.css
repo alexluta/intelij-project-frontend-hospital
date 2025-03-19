@@ -1,0 +1,69 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    display: flex;
+    justify-content: flex-start; /* Aliniază butonul sus pe axa verticală */
+    align-items: center; /* Centrează butonul pe axa orizontală */
+    height: 100vh;
+    margin: 0;
+    padding-top: 0px;
+    flex-direction: column; /* Organizează elementele într-o coloană */
+}
+
+.pacient-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    border: 5px solid #845ec2;
+}
+
+.pacient-container h2 {
+    margin-bottom: 20px;
+    color: #ff6f91;
+}
+
+.pacient-container button {
+    background-color: #845ec2;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.pacient-container button:hover {
+    background-color: #ff6f91;
+}
+
+/* Modificări pentru lista de pacienți */
+#pacientiList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px; /* Reducem margin-top pentru a apropia lista de buton */
+    max-height: 300px; /* Limitează înălțimea listei */
+    overflow-y: auto;  /* Adaugă scroll vertical dacă lista depășește înălțimea */
+    border: 1px solid #ddd; /* Adăugăm o margine subțire pentru a face lista mai vizibilă */
+    padding-right: 10px; /* Asigură-te că scroll-ul are loc pe partea dreaptă */
+}
+
+#pacientiList li {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0; /* Spațiu între elemente */
+    font-size: 16px; /* Ajustează dimensiunea textului */
+}
+
+/* Stil pentru elementele impare și pare */
+#pacientiList li:nth-child(odd) {
+    background-color: #ffe0e0; /* Culoare mai deschisă pentru elementele impare */
+}
+
+#pacientiList li:nth-child(even) {
+    background-color: #ffb3b3; /* Culoare mai închisă pentru elementele pare */
+}
