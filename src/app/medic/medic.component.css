@@ -41,18 +41,25 @@ body {
     background-color: #ff6f91;
 }
 
+/* Modificări pentru lista de pacienți */
 #mediciList {
     list-style-type: none;
     padding: 0;
-    margin-top: 50px;
+    margin-top: 20px; /* Reducem margin-top pentru a apropia lista de buton */
+    max-height: 300px; /* Limitează înălțimea listei */
+    overflow-y: auto;  /* Adaugă scroll vertical dacă lista depășește înălțimea */
+    border: 1px solid #ddd; /* Adăugăm o margine subțire pentru a face lista mai vizibilă */
+    padding-right: 10px; /* Asigură-te că scroll-ul are loc pe partea dreaptă */
 }
 
 #mediciList li {
     padding: 10px;
     border-radius: 5px;
     margin: 5px 0; /* Spațiu între elemente */
+    font-size: 16px; /* Ajustează dimensiunea textului */
 }
 
+/* Stil pentru elementele impare și pare */
 #mediciList li:nth-child(odd) {
     background-color: #ffe0e0; /* Culoare mai deschisă pentru elementele impare */
 }

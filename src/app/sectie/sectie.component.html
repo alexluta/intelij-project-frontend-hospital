@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sectii</title>
-
 </head>
 <body>
-<div class="sectie-container">
-  <!-- Adaugă id la buton -->
-  <button id="raportSectiiBtn">Raport sectii</button>
-</div>
+  <div class="sectie-container">
+    <!-- Butonul care va lansa cererea -->
+    <button id="raportSectiiBtn" (click)="loadRaportSectii()">Raport sectii</button>
+    
+    <!-- Adăugăm un newline -->
+    <br> <!-- Aceasta va adăuga un spațiu între buton și listă -->
 
+  </div>
 
-<!-- Adaugă un element pentru lista de sectii -->
-<ul id="sectiiList"></ul>
-
+  <!-- Lista de saloane -->
+  <ul id="sectiiList"></ul>
 </body>
 </html>
-<p>sectie works!</p>

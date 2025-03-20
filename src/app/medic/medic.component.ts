@@ -34,4 +34,29 @@ export class MedicComponent implements OnInit {
       });
     }
   }
+
+  // Metoda pentru exportarea datelor în CSV cu confirmare înainte
+  exportToCSV(): void {
+    // Pop-up de confirmare înainte de a exporta
+    const confirmExport = window.confirm('Ești sigur că vrei să descarci raportul?');
+    if (confirmExport) {
+      const header = ['Nume', 'Prenume', 'Specializare']; // Antetul pentru CSV
+      const rows = this.medici.map(medic => [medic.nume, medic.prenume, medic.specializare]); // Rândurile de date
+
+      // Crearea unui string CSV
+      let csvContent = 'data:text/csv;charset=utf-8,' + header.join(';') + '\n'; // Adăugarea antetului la CSV
+      rows.forEach(row => {
+        csvContent += row.join(';') + '\n';  // Adăugarea fiecărui rând de date la CSV
+      });
+
+      // Crearea unui link pentru descărcare și declanșarea descărcării
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement('a');
+      link.setAttribute('href', encodedUri);
+      link.setAttribute('download', 'raport_medici.csv');
+      link.click();
+    } else {
+      console.log('Exportul a fost anulat.');  // Dacă utilizatorul anulează exportul
+    }
+  }
 }
