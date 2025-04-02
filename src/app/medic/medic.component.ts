@@ -9,6 +9,7 @@ import { MedicService } from './medic.service';
 export class MedicComponent implements OnInit {
 
   medici: any[] = [];  // Lista de medici
+  sortType: string = 'none'; // Tipul de sortare selectat
 
   constructor(private medicService: MedicService) { }
 
@@ -18,9 +19,24 @@ export class MedicComponent implements OnInit {
   loadRaportMedici(): void {
     this.medicService.getMedici().subscribe(data => {
       this.medici = data;
+      this.sortMedici();
       this.displayMedici();
     });
   }
+
+  sortMedici(): void {
+    if (this.sortType === 'asc') {
+      this.medici.sort((a, b) => a.nume.localeCompare(b.nume));
+    } else if (this.sortType === 'desc') {
+      this.medici.sort((a, b) => b.nume.localeCompare(a.nume));
+    }
+  }
+  updateSorting(event: Event): void {
+    const target = event.target as HTMLSelectElement;
+    this.sortType = target.value;
+    this.sortMedici();
+  }
+  
 
   // Afișează medicii în lista
   displayMedici(): void {
@@ -35,7 +51,7 @@ export class MedicComponent implements OnInit {
     }
   }
 
-  // Metoda pentru exportarea datelor în CSV cu confirmare înainte
+  // Metoda pentru exportarea datelor în CSV 
   exportToCSV(): void {
     // Pop-up de confirmare înainte de a exporta
     const confirmExport = window.confirm('Ești sigur că vrei să descarci raportul?');
@@ -60,3 +76,9 @@ export class MedicComponent implements OnInit {
     }
   }
 }
+
+
+
+
+
+

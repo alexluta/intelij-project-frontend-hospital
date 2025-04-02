@@ -1,0 +1,18 @@
+<div class="logare-container">
+    <h2>Autentificare</h2>
+    
+    <label>Email:</label>
+    <input type="email" placeholder="Introduceți email-ul" (input)="updateEmail($event)" />
+  
+    <label>Parolă:</label>
+    <input type="password" placeholder="Introduceți parola" (input)="updatePassword($event)" />
+  
+    <button (click)="login()">Login</button>
+  
+    <!-- Afișează token-ul dacă există -->
+    <p *ngIf="token">Token: {{ token }}</p>
+    
+    <!-- Afișează mesajul de eroare dacă există -->
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  </div>
+  

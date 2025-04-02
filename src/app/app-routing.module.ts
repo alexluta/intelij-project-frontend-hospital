@@ -8,6 +8,8 @@ import { PacientComponent } from './pacient/pacient.component';
 import { SalonComponent } from './salon/salon.component';
 import { SectieComponent } from './sectie/sectie.component';
 import { TratamentComponent } from './tratament/tratament.component';
+import { CursvalutarComponent } from './cursvalutar/cursvalutar.component';
+//import { LogareComponent } from './logare/logare.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -19,5 +21,8 @@ export const routes: Routes = [
   { path: 'salon', component: SalonComponent },
   { path: 'sectie', component: SectieComponent },
   { path: 'tratament', component: TratamentComponent },
+  { path: 'cursvalutar', component: CursvalutarComponent },
+ // { path: 'logare', component: LogareComponent },
+
   { path: '', redirectTo: '/medic', pathMatch: 'full' }
 ];

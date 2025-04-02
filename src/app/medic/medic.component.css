@@ -1,5 +1,5 @@
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Roboto', cursive, sans-serif;
     background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
     display: flex;
     justify-content: flex-start; /* Aliniază butonul sus pe axa verticală */
@@ -7,6 +7,7 @@ body {
     height: 100vh;
     margin: 0;
     padding-top: 0px;
+    line-height: 2;
     flex-direction: column; /* Organizează elementele într-o coloană */
 }
 
@@ -45,25 +46,25 @@ body {
 #mediciList {
     list-style-type: none;
     padding: 0;
-    margin-top: 20px; /* Reducem margin-top pentru a apropia lista de buton */
-    max-height: 300px; /* Limitează înălțimea listei */
-    overflow-y: auto;  /* Adaugă scroll vertical dacă lista depășește înălțimea */
-    border: 1px solid #ddd; /* Adăugăm o margine subțire pentru a face lista mai vizibilă */
-    padding-right: 10px; /* Asigură-te că scroll-ul are loc pe partea dreaptă */
+    margin-top: 20px; 
+    max-height: 300px; 
+    overflow-y: auto;  
+    border: 1px solid #ddd; 
+    padding-right: 10px; 
 }
 
 #mediciList li {
     padding: 10px;
     border-radius: 5px;
-    margin: 5px 0; /* Spațiu între elemente */
-    font-size: 16px; /* Ajustează dimensiunea textului */
+    margin: 5px 0; 
+    font-size: 16px; 
 }
 
-/* Stil pentru elementele impare și pare */
+
 #mediciList li:nth-child(odd) {
-    background-color: #ffe0e0; /* Culoare mai deschisă pentru elementele impare */
+    background-color: #ffe0e0; 
 }
 
 #mediciList li:nth-child(even) {
-    background-color: #ffb3b3; /* Culoare mai închisă pentru elementele pare */
+    background-color: #ffb3b3; 
 }

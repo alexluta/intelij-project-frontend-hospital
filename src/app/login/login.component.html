@@ -18,13 +18,23 @@
 </head>
 <body>
 <div class="login-container">
-  <h2>Login</h2>
-  <input type="text" id="username" placeholder="Username" onkeyup="validateForm()">
-  <input type="password" id="password" placeholder="Password" onkeyup="validateForm()">
-  <button id="loginButton" enable>Login</button>
+  <h2>Autentificare</h2>
+  
+  <label>Email:</label>
+  <input type="email" placeholder="Introduceți email-ul" (input)="updateEmail($event)" />
+
+  <label>Parolă:</label>
+  <input type="password" placeholder="Introduceți parola" (input)="updatePassword($event)" />
+
+  <button (click)="login()">Login</button>
+
+ 
+  <p *ngIf="token" class="token-display">Token: {{ token }}</p> <!-- Token afișat la început -->
+  
+  <!-- Afișează mesajul de eroare dacă există -->
+  <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
   <p>Nu ai cont? <a href="/register">Inregistreaza-te</a></p>
+  
 </div>
 </body>
 </html>
-<p>Esti in interfata "LOGIN"!</p>
-

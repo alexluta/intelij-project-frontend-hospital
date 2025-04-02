@@ -13,7 +13,7 @@
         padding: 40px;
         border-radius: 20px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        text-align: center;
+        text-align: left;
         width: 300px;
     }
 
@@ -22,7 +22,9 @@
         color: #ff6f91;
     }
 
-    .login-container input[type="text"],
+ 
+
+    .login-container input[type="email"],
     .login-container input[type="password"] {
         width: 80%;
         padding: 15px;
@@ -33,7 +35,7 @@
         transition: all 0.3s ease;
     }
 
-    .login-container input[type="text"]:focus,
+    .login-container input[type="email"]:focus,
     .login-container input[type="password"]:focus {
         border-color: #845ec2;
         box-shadow: 0 0 10px rgba(132, 94, 194, 0.5);
@@ -74,3 +76,19 @@
         background-color: #cccccc;
         cursor: not-allowed;
     }
+    .token-display {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: monospace;
+        font-size: 14px;
+        margin-top: 20px;
+        width: 300px; /* Setează o lățime fixă pentru test */
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+    
+    
+    

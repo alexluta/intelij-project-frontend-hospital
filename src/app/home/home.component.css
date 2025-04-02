@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 100vh;
+    height: 80vh;
     margin: 0;
 }
 
@@ -102,4 +102,61 @@ h1 {
     justify-content: center;
     align-items: center;
     width: 16%; /* Setează lățimea fiecărui link */
+}
+
+
+  
+  .currency-button {
+    background-color: #845ec2;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .currency-button:hover {
+    background-color: #e0305c;
+    transform: scale(1.3);
+  }
+  .login-container {
+    position: absolute;
+    top: 10px;
+    right:470px; /* Mută mai spre stânga */
+}
+.currency-button {
+    position: absolute;
+    top: 260px;
+    right:490px; /* Mută mai spre stânga */
+}
+
+
+  
+.info-button {
+    background-color: #845ec2;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .info-button:hover {
+    background-color: #e0305c;
+    transform: scale(1.3);
+  }
+  .info-button {
+    position: absolute;
+    top: 330px;
+    right:490px; /* Mută mai spre stânga */
 }

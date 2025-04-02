@@ -1,0 +1,30 @@
+body {
+    font-family: 'Roboto', cursive, sans-serif;
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    display: flex;
+    justify-content: flex-start; /* Aliniază butonul sus pe axa verticală */
+    align-items: center; /* Centrează butonul pe axa orizontală */
+    height: 100vh;
+    margin: 0;
+    padding-top: 0px;
+    line-height: 2;
+    flex-direction: column; /* Organizează elementele într-o coloană */
+}
+
+.cursvalutar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f7f7f7, #dcdcdc);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    height: 300vh; /* Setează pentru a ocupa întreaga înălțime a ecranului */
+    width: fit-content;
+    margin: 50px auto;
+}
+
+
+
+
+
